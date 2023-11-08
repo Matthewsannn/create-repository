@@ -1,0 +1,123 @@
+/* Genel Ayarlar */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url('/images/background.jpg'); /* Arka plan resmini ekleyin */
+  background-size: cover; /* Resmi kaplayacak şekilde ayarlayın */
+  background-position: center;
+}
+
+
+/* Navigasyon Barı Stili */
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  padding: 0 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+/* Banner */
+.main-banner {
+  background-color: #e9ecef;
+  padding: 2em;
+  text-align: center;
+}
+
+.main-banner h1 {
+  margin: 0;
+  color: #333;
+}
+
+/* İçerik Alanı */
+.content {
+  padding: 2em;
+}
+
+.content h2 {
+  color: #333;
+}
+
+/* Uzmanlık Alanları */
+.areas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2em;
+}
+
+.area {
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.area h3 {
+  margin-top: 0;
+}
+
+/* Altbilgi (Footer) */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Yardımcı Sınıflar */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Medya Sorguları */
+@media (max-width: 768px) {
+  .areas-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    padding: 0.5em 0;
+  }
+}
+
