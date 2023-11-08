@@ -24,8 +24,8 @@ app.get('/uzmanlik-alanlarimiz', (req, res) => {
 });
 
 
-app.get('/iletisim', (req, res) => {
-     res.render('iletisim',{title: 'İletişim'});
+app.get('/contact', (req, res) => {
+     res.render('contact',{title: 'İletişim'});
      });
      app.post('/send-email', (req, res) => {
          let mailOpts, smtpTrans;
@@ -46,12 +46,36 @@ app.get('/iletisim', (req, res) => {
 
                                                                                                              smtpTrans.sendMail(mailOpts, (error, response) => {
                                                                                                                      if (error) {
-                                                                                                                                 res.render('iletisim', { msg: 'Hata oluştu, e-posta gönderilemedi.' });
+                                                                                                                                 res.render('contact', { msg: 'Hata oluştu, e-posta gönderilemedi.' });
                                                                                                                                          } else {
                                                                                                                                                      res.render('contact', { msg: 'E-posta başarıyla gönderildi!' });
                                                                                                                                                              }
                                                                                                                                                                  });
                                                                                                                                                               });
+
+
+app.get('/blog', (req, res) => {
+    
+             const blogPosts = [
+                     {
+                                 title: 'Boşanma süreci nasıl işler?',
+                                             summary: 'Boşanma süreci, dava açılması ile başlar ve karşılıklı veya tek taraflı olabilir...',
+                                                         link: '/blog/soru1'
+                                                                 },
+                                                                         {
+                                                                                     title: 'Trafik kazası tazminatı nasıl alınır?',
+                                                                                                 summary: 'Trafik kazası sonucu tazminat talebinde bulunmak için öncelikle kaza raporu ve...',
+                                                                                                             link: '/blog/soru2'
+                                                                                                                     },
+                                                                                                                             {
+                                                                                                                                         title: 'İş yerinde mobbinge uğradım, ne yapmalıyım?',
+                                                                                                                                                     summary: 'İş yerinde maruz kaldığınız mobbing durumunda alabileceğiniz yasal önlemler...',
+                                                                                                                                                                 link: '/blog/soru3'
+                                                                                                                                                                         }
+    
+                                                                                                                                                                                     ];
+                                                                                                                                                                                            res.render('blog', { posts: blogPosts });
+                                                                                                                                                                                             });
 
 app.listen(port, () => {
   console.log(`Server ${port} portunda başlatıldı.`);

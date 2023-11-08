@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <%- include('../partials/head.ejs') %> <!-- Başlık ve CSS dosyalarını içerir -->
+    <title>Blog - Avukatlık Bürosu</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %> <!-- Navigasyon menüsünü içerir -->
+
+    <main>
+        <h1>Blog</h1>
+        <section id="blog-posts">
+            <article class="post">
+                <h2>Boşanma süreci nasıl işler?</h2>
+                <p>Boşanma süreci, dava açılması ile başlar ve karşılıklı veya tek taraflı olabilir...</p>
+                <a href="/blog/soru1">Devamını oku</a>
+            </article>
+            <article class="post">
+                <h2>Trafik kazası tazminatı nasıl alınır?</h2>
+                <p>Trafik kazası sonucu tazminat talebinde bulunmak için öncelikle kaza raporu ve...</p>
+                <a href="/blog/soru2">Devamını oku</a>
+            </article>
+            <article class="post">
+                <h2>İş yerinde mobbinge uğradım, ne yapmalıyım?</h2>
+                <p>İş yerinde maruz kaldığınız mobbing durumunda alabileceğiniz yasal önlemler...</p>
+                <a href="/blog/soru3">Devamını oku</a>
+            </article>
+            <!-- Daha fazla blog yazısı -->
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %> <!-- Footer'ı içerir -->
+</body>
+</html>
+

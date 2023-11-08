@@ -120,4 +120,76 @@ footer {
     padding: 0.5em 0;
   }
 }
+/* Add your existing styles here */
+
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9; /* Dropdown background color */
+  min-width: 160px; /* Set a min-width if necessary */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Box shadow for a little depth */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black; /* Dropdown links color */
+  padding: 12px 16px; /* Padding for dropdown links */
+  text-decoration: none;
+  display: block; /* Display links as block elements */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Background color for dropdown link hover state */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Display the dropdown content on hover */
+}
+
+/* You might want to add styles for the dropdown button itself */
+.dropbtn {
+  background-color: #4CAF50; /* Button background color */
+  color: white; /* Button text color */
+  padding: 16px; /* Button padding */
+  font-size: 16px; /* Button font size */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Add other styles below */
+/* Add your existing styles here */
+
+/* Contact form styles */
+.contact-form {
+  max-width: 600px; /* Maximum width of the form */
+  margin: 200 auto; /* Center the form in the page */
+  padding: 10em;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 10em; /* Space between each form field */
+  padding: 5em; /* Padding inside the form fields */
+  border: 1px solid #ccc; /* Border color */
+}
+
+.contact-form textarea {
+  height: 400px; /* Height of the message box */
+  resize: vertical; /* Allow only vertical resizing */
+}
+
+/* Add other styles below */
 
